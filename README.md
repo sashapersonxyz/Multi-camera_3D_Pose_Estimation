@@ -10,7 +10,7 @@ This repo is for end to end 3D human pose estimation from multiple video streams
 
 
 Setup:
-Install (Mmpose)[https://github.com/open-mmlab/mmpose]
+Install [Mmpose](https://github.com/open-mmlab/mmpose)
 
 
 
