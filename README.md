@@ -10,8 +10,9 @@ This repo is for end to end 3D human pose estimation from multiple video streams
 
 
 Setup:
+Clone the repo: git clone https://github.com/sashapersonxyz/Multi-camera_3D_Pose_Estimation.git
 Install [Mmpose](https://github.com/open-mmlab/mmpose)
-
+Install additional requirements: pip install requirements.txt
 
 
 
