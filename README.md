@@ -11,11 +11,13 @@ This repo is for end to end 3D human pose estimation from multiple video streams
 
 Setup:
 - Clone the repo: git clone https://github.com/sashapersonxyz/Multi-camera_3D_Pose_Estimation.git
-- Install [Mmpose](https://github.com/open-mmlab/mmpose)
+- Install [Mmpose](https://github.com/open-mmlab/mmpose) (be sure to add to system path)
 - Install additional requirements: pip install requirements.txt
 - Modify model_paths.yaml to point to the relevant Mmpose model paths. Note, this code has only been tested with coco type estimation schemes, however others should readily work (3D plotting may not work until the BODYPARTS dictionary is amendend within utils.py)
 
 
+
+list  available recording device names by checking QuckTime or running the following ffmpeg command: ffmpeg _-f avfoundation -list_devices true -i ""_
 
 
 Camera parameter estimation tips:
