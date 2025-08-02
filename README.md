@@ -19,6 +19,8 @@ Setup:
 
 list  available recording device names by checking QuckTime or running the following ffmpeg command: ffmpeg _-f avfoundation -list_devices true -i ""_
 
+python record_and_estimate_pose.py --camera_names "camera_name0" "camera_name1" --recording_length_seconds 20 --synchronize_video
+
 
 Camera parameter estimation tips:
 
