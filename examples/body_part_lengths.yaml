@@ -1,0 +1,13 @@
+my_lengths:
+  left_shoulder_left_elbow: 38
+  left_elbow_left_wrist: 27
+  right_shoulder_right_elbow: 38
+  right_elbow_right_wrist: 27
+  left_hip_left_knee: 51
+  left_knee_left_ankle: 40
+  right_hip_right_knee: 51
+  right_knee_right_ankle: 40
+  left_hip_right_hip: 31
+  left_shoulder_left_hip: 54
+  right_shoulder_right_hip: 54
+  left_shoulder_right_shoulder: 47
