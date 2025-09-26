@@ -17,15 +17,15 @@ Calibrating the intrinsic and extrinsic parameters is straightforwardly done whe
 
 In order to appropriately reference the attached cameras for recording in QuickTime, list  available recording device names by checking QuckTime or running the following ffmpeg command: ffmpeg _-f avfoundation -list_devices true -i ""_. These correspond to "camera_name0" and "camera_name1" below
 
-_python record_and_estimate_pose.py --camera_names "camera_name0" "camera_name1" --recording_length_seconds 20 --synchronize_video_
+    _python record_and_estimate_pose.py --camera_names "camera_name0" "camera_name1" --recording_length_seconds 20 --synchronize_video_
 
 After following all user prompts, the result of this code will be intrinsic and extrinsic camera calibration files, synchroized video recordings, and 2D/3D/heatmap pose estimation for the captured performance.
 
 The raw estimated pose can be fairly jittery. In order to refine the estimated pose we can run the command
 
-_python pose_refinement.py --run_path path/to/recording_1 path/to/recording_2 --refinement_types SGD linear_interpolation_
+    _python pose_refinement.py --run_path path/to/recording_1 path/to/recording_2 --refinement_types SGD linear_interpolation_
 
-to perfrom SGD (refinement_types = SGD) to produce MLE estimates under constraints (body length specifications or smoothness assumptions) or linear interpolation with outlier filtering (refinement_types = SGD). See pose_refinement.linear_interpolation and pose_refinement.Optimized_3d_Pose_Estimation for more impolementation details. Specific refinement parameters can be specified by creating a parameters yaml file containing parameters for SGD and/or linear_interpolation. e.g.
+to perfrom SGD (refinement_types = SGD) to produce MLE estimates under constraints (body length specifications or smoothness assumptions) or linear interpolation with outlier filtering (refinement_types = linear_interpolation). See pose_refinement.linear_interpolation and pose_refinement.Optimized_3d_Pose_Estimation for more impolementation details. Specific refinement parameters can be specified by creating a parameters yaml file containing parameters for SGD and/or linear_interpolation. e.g.
 SGD:
   max_iter: 50000
   lr: 0.01
@@ -43,7 +43,7 @@ individual_specifier:
 
 heatmaps, 3D projective plots, and  be constructed using
 
-_python plot_utils.py --recording_log path/to/recording_log.yaml --plot_types "3D_pose"_.
+    _python plot_utils.py --recording_log path/to/recording_log.yaml --plot_types "3D_pose"_.
 
 and 3D interactive plots can be viewed using plot_utils.interactive_3d_pose_animation.
 
