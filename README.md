@@ -7,6 +7,12 @@ This repo is for end to end 3D human pose estimation from multiple video streams
 5. Optionally refinining the estimated pose using the 2D coordinate estimates and optionally smtoothness constraints and ground truth human body measurments. (Additionally optimizing the camera parameters)
 
 
+
+
+![til](https://github.com/sashapersonxyz/Multi-camera_3D_Pose_Estimation/blob/main/examples/project_gif.gif)
+
+
+
 Setup:
 - Clone the repo: git clone https://github.com/sashapersonxyz/Multi-camera_3D_Pose_Estimation.git
 - Install [Mmpose](https://github.com/open-mmlab/mmpose) (be sure to add to system path)
